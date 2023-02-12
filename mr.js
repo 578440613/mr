@@ -1,12 +1,13 @@
 /*
 移除小程序 重新登录
-重写
- [MITM]
- hostname = shopapp.miiow.com.cn
- [rewrite_local]
-https://shopapp.miiow.com.cn/buyer/mini-program/ url script-response-body mr.js
-[task_local]
+BoxJs-我的-数据查看器-输入mr查看数据
 
+ [MITM]
+    hostname = shopapp.miiow.com.cn
+ [rewrite_local]
+    https://shopapp.miiow.com.cn/buyer/mini-program/ url script-response-body https://raw.githubusercontent.com/578440613/mr/main/mr.js
+[task_local]
+    0 0 * * * https://raw.githubusercontent.com/578440613/mr/main/mr.js,tag=猫人会员商城,enabled=true
 */
 
 const $ = new Env('猫人');
